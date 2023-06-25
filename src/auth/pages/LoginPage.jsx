@@ -7,9 +7,11 @@ export const LoginPage = () => {
   const navigate = useNavigate();
 
   const onLogin = () => {
-    login("Roita");
+    const lastPath = localStorage.getItem("lastPath") || "/";
 
-    navigate("/", {
+    login("Sebastian Roa");
+
+    navigate(lastPath, {
       replace: true,
     });
   };
